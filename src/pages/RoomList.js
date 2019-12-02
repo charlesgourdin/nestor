@@ -8,16 +8,23 @@ const RoomList = props => {
         <>
             <>  <div>
 
-                </div>
+            </div>
                 <div className='roomContainer'>
                     {rooms.map((item, i) => {
                         return (
                             <div className="roomCard" key={i}>
-                                <p>{item.name}</p>
-                                <p>{item.address}</p>
-                                <p>{item.zip}</p>
-                                <p>{item.city}</p>
-                                <p>{item.status}</p>
+                                <div className="roomName">
+                                    <b>{item.name}</b>
+                                </div>
+                                <div className="roomAddress">
+                                    <p>Adresse :</p>
+                                    <b>{item.address}</b>
+                                    <b>{item.zip}</b>
+                                    <b>{item.city}</b>
+                                </div>
+                                <div className="roomStatus" style={{background: item.status==="available" ? '#71da71' : '#ff4d4d'}}>
+                                    <p>{item.status}</p>
+                                </div>
                             </div>
                         )
                     })}
