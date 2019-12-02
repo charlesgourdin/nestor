@@ -1,0 +1,19 @@
+.roomContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.roomCard {
+    margin: 12px;
+    width: 400px;
+    height: 300px;
+    background-color: brown;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.roomCard p {
+    margin-left: 12px;
+}
