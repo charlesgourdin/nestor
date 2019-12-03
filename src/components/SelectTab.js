@@ -3,8 +3,8 @@ import { PrincipalContext } from '../providers/PrincipalContext';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import '../App.css'
 
-const SelectTab = props => {
-    const { filterStatus } = useContext(PrincipalContext)
+const SelectTab = () => {
+    const { filterStatus, filterCity } = useContext(PrincipalContext)
 
     return (
         <div className='selectTabContainer'>
@@ -13,24 +13,23 @@ const SelectTab = props => {
                     <legend>Filter by status</legend>
                     <FormGroup check>
                         <Label check>
-                            <Input type="radio" name="radioStatus" defaultChecked value="all" onChange={filterStatus}/>{' '}
+                            <Input type="radio" name="radioStatus" defaultChecked value="all" onChange={filterStatus} />{' '}
                             All
                         </Label>
                     </FormGroup>
                     <FormGroup check>
                         <Label check>
-                            <Input type="radio" name="radioStatus" value="available" onChange={filterStatus}/>{' '}
+                            <Input type="radio" name="radioStatus" value="available" onChange={filterStatus} />{' '}
                             Avalaible
                         </Label>
                     </FormGroup>
-                    <FormGroup check disabled>
+                    <FormGroup check >
                         <Label check>
                             <Input type="radio" name="radioStatus" value="occupied" onChange={filterStatus} />{' '}
                             Occupied
                         </Label>
                     </FormGroup>
                 </FormGroup>
-
             </Form>
         </div>
     )

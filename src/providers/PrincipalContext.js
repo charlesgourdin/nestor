@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import axios from 'axios';
 export const PrincipalContext = React.createContext();
 
 class PrincipalProvider extends Component {
@@ -14,22 +14,18 @@ class PrincipalProvider extends Component {
     }
 
     filterStatus = (e) => {
-        let filterRooms = []
 
-        if (e.target.value === 'available') {
-            filterRooms = this.state.rooms.filter(item =>{
-                return item.status === 'available'
-            })
-        } else if (e.target.value === 'occupied') {
-            filterRooms = this.state.rooms.filter(item =>{
-                return item.status === 'occupied'
+        if (e.target.value === 'all') {
+            this.setState({
+                roomsDisplay: this.state.rooms
             })
         } else {
-            filterRooms = this.state.rooms
+            this.setState({
+                roomsDisplay: this.state.rooms.filter(item => {
+                    return item.status === e.target.value
+                })
+            })
         }
-
-        this.setState({roomsDisplay : filterRooms})
-
     }
 
 
