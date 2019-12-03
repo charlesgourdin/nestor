@@ -39,7 +39,7 @@ class PrincipalProvider extends Component {
             .then(response => response.data)
             .then(data => {
                 // console.log(data)
-                this.setState({ rooms: data })
+                this.setState({ rooms: data, roomsDisplay: data })
             })
 
         axios
