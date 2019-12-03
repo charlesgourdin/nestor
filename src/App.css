@@ -20,8 +20,9 @@
 
 .globalScreen{
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 90px);
     display: flex;
+    overflow: hidden;
 }
 
 .selectTabContainer{
@@ -38,12 +39,14 @@
 .roomContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+    align-content: flex-start;
+    overflow-y: auto;
 }
 
 .roomCard {
-    margin: 12px;
+    margin: 24px;
     width: 400px;
     height: 200px;
     border-radius: 12px;

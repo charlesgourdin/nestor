@@ -13,7 +13,7 @@ const SelectTab = props => {
                     <legend>Filter by status</legend>
                     <FormGroup check>
                         <Label check>
-                            <Input type="radio" name="radioStatus" value="all" onChange={filterStatus}/>{' '}
+                            <Input type="radio" name="radioStatus" defaultChecked value="all" onChange={filterStatus}/>{' '}
                             All
                         </Label>
                     </FormGroup>
