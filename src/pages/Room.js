@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
-import { PrincipalContext } from '../providers/PrincipalContext'
+import React, { useContext } from 'react';
+import { PrincipalContext } from '../providers/PrincipalContext';
 import '../App.css';
 
-const Room = props => {
+const Room = (props) => {
 
     const { rooms, clients } = useContext(PrincipalContext)
     const id = props.match.params.id

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import '../App.css';
 import { NavLink as Link } from 'react-router-dom';
 import {Jumbotron} from 'reactstrap';
 
-const Home = props => {
+const Home = () => {
     return (
         <div className="home">
             <Link className="buttonActive" to={`/roomlist`}>

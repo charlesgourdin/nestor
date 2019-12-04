@@ -18,19 +18,19 @@ const RoomList = () => {
                                     <Label check>
                                         <Input type="radio" name="radioStatus" defaultChecked value="all" onChange={filterRoomStatus} />{' '}
                                         All
-                        </Label>
+                                    </Label>
                                 </FormGroup>
                                 <FormGroup check>
                                     <Label check>
                                         <Input type="radio" name="radioStatus" value="available" onChange={filterRoomStatus} />{' '}
                                         Avalaible
-                        </Label>
+                                    </Label>
                                 </FormGroup>
                                 <FormGroup check >
                                     <Label check>
                                         <Input type="radio" name="radioStatus" value="occupied" onChange={filterRoomStatus} />{' '}
                                         Occupied
-                        </Label>
+                                    </Label>
                                 </FormGroup>
                             </FormGroup>
                         </Form>

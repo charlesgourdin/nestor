@@ -1,6 +1,6 @@
 import React from 'react';
-import '../App.css'
-import nestorLogo from '../assets/nestorLogo.png'
+import '../App.css';
+import nestorLogo from '../assets/nestorLogo.png';
 import { Button } from 'reactstrap';
 import { NavLink as Link } from 'react-router-dom';
 
