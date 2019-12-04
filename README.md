@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Test technique 'Chez Nestor'.
 
-## Available Scripts
+## https://hardcore-haibt-83e030.netlify.com
 
-In the project directory, you can run:
+Réalisé en React.js
 
-### `npm start`
+-----------------------------------------------------------------------------------------
+### Chez Nestor - Test Technique
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-----
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Le but de l'exercice est de créer les 3 pages suivantes pour le backoffice de Chez Nestor :
 
-### `npm test`
+- 🏠 Une liste de chambres
+- 🛏️ Une page de détails de chambre
+- 👤 Une page de détails de client
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Une petite API te permet de récupérer les différentes données :
 
-### `npm run build`
+```
+GET https://technical-test-api.herokuapp.com/rooms -> Données de toutes les chambres
+GET https://technical-test-api.herokuapp.com/rooms/:id -> Données d'une chambre
+GET https://technical-test-api.herokuapp.com/clients -> Données de tous les clients
+GET https://technical-test-api.herokuapp.com/clients/:id -> Données d'un client
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Une chambre est représentée par les champs suivants :
+- `id` : String, UUID unique ;
+- `name` : String, nom et numéro de la chambre ;
+- `address` : String, addresse (numéro + rue) ;
+- `zip` : String, code postal ;
+- `city` : String, ville ;
+- `status` : String, indique si la chambre est disponible ou non (`available`, `occupied`) ;
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Un client est représenté par les champs suivants :
+- `id` : String, UUID unique ;
+- `name` : String, prénom et nom ;
+- `roomId` : String, UUID de la chambre ;
+- `email` : String, adresse email ;
+- `phone` : String, numéro de téléphone ;
+- `birthDate` : String, date de naissance ;
+- `nationality` : String, nationalité ;
+- `status` : String, indique si le client a réservé mais n'est pas encore dans sa chambre (`booked`), s'il a fait son état des lieux d'entrée (`checked-in`) ou s'il a quitté sa chambre (`checked-out`).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Technologie** : le langage, le framework et plus généralement les outils sont libres, utilisez ce que vous connaissez le mieux ! :)
 
-### `npm run eject`
+Le sujet est volontairement extrêmement large.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Quelques pistes de choses qui nous intéressent :
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- ✨ Propreté de code : découpage, gestion d'erreurs, nommage des variables / fonctions, etc.
+- 📚 Utilisation de librairies / frameworks
+- 🎨 Réflexion UI / UX
+- ⚙️ Tests
+- ☁️ Déploiement sur un hébergeur (Netlify, Heroku ou autre)
+- 📦 Consommation d'API
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Si tu penses que tu as fait quelque chose qui mérite notre attention, n'hésite pas à nous le signaler ! :) 
