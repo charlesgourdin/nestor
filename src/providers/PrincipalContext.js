@@ -9,19 +9,36 @@ class PrincipalProvider extends Component {
             rooms: [],
             clients: [],
             roomsDisplay: [],
-            filterStatus: this.filterStatus
+            clientsDisplay: [],
+            filterRoomStatus: this.filterRoomStatus,
+            filterClientStatus: this.filterClientStatus
         }
     }
 
-    filterStatus = (e) => {
+    filterRoomStatus = (e) => {
 
         if (e.target.value === 'all') {
             this.setState({
-                roomsDisplay: this.state.rooms
+                roomsDisplay: this.state.rooms,
             })
         } else {
             this.setState({
                 roomsDisplay: this.state.rooms.filter(item => {
+                    return item.status === e.target.value
+                })
+            })
+        }
+    }
+
+    filterClientStatus = (e) => {
+
+        if (e.target.value === 'all') {
+            this.setState({
+                clientsDisplay: this.state.clients,
+            })
+        } else {
+            this.setState({
+                clientsDisplay: this.state.clients.filter(item => {
                     return item.status === e.target.value
                 })
             })
@@ -43,7 +60,7 @@ class PrincipalProvider extends Component {
             .then(response => response.data)
             .then(data => {
                 // console.log(data)
-                this.setState({ clients: data })
+                this.setState({ clients: data, clientsDisplay: data })
             })
 
     }
